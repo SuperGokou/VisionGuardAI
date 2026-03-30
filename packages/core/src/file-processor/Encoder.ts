@@ -140,8 +140,9 @@ export class Encoder {
         highWaterMark: STREAM_CHUNK_SIZE,
       });
 
-      stream.on("data", (chunk: Buffer) => {
-        totalBytes += chunk.length;
+      stream.on("data", (chunk: string | Buffer) => {
+        const buf = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk);
+        totalBytes += buf.length;
         if (totalBytes > MAX_BUFFER_SIZE) {
           stream.destroy();
           reject(
@@ -153,7 +154,7 @@ export class Encoder {
           );
           return;
         }
-        chunks.push(chunk);
+        chunks.push(buf);
       });
 
       stream.on("end", () => {
