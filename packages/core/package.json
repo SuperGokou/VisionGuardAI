@@ -1,0 +1,14 @@
+{
+  "name": "@visionguard/core",
+  "version": "0.1.0",
+  "description": "Core file processing, encoding, and request building for VisionGuard AI",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": ["dist/"],
+  "license": "MIT"
+}

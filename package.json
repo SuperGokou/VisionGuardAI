@@ -1,0 +1,37 @@
+{
+  "name": "visionguard-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-modal Vision & Local Document Analysis for Gemini CLI",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "preflight": "npm run typecheck && npm run lint && npm run test",
+    "build": "npm run build --workspaces",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --build",
+    "lint": "eslint packages/*/src/**/*.{ts,tsx}",
+    "lint:fix": "eslint packages/*/src/**/*.{ts,tsx} --fix",
+    "format": "prettier --write \"packages/*/src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"packages/*/src/**/*.{ts,tsx}\"",
+    "clean": "rm -rf packages/*/dist packages/*/*.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "license": "MIT",
+  "author": "Ming Xia (SuperGokou)"
+}

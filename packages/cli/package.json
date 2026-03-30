@@ -1,0 +1,20 @@
+{
+  "name": "@visionguard/cli",
+  "version": "0.1.0",
+  "description": "CLI entry point for VisionGuard AI multi-modal analysis",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "visionguard": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@visionguard/core": "0.1.0"
+  },
+  "files": ["dist/"],
+  "license": "MIT"
+}

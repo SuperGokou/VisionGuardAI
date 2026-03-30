@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.npm
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Claude Code related files
+.claude/
+.omc/
+CLAUDE.md
+.claude.json
+*.claude.*
+
+# Internal planning docs
+gemini-multimodal-master-prompt.md
+progress-tracker.md
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp
+tmp/
+temp/
